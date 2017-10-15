@@ -1,0 +1,319 @@
+/*Code source- W3school*/
+ 
+	/*set background image for all pages */
+	body {
+		   background-image: url("back2.jpg");
+           background-size: 100% 100%;
+	}
+
+	/*set header for all pages */	
+	header {
+			 width:80em;
+			 height:12.500em;
+			 background-position:center; 
+			 background-repeat:no-repeat;
+	}
+	
+	/* main container in the middle */
+	#container {
+				width: 920px;
+				background: #d0ddce;
+				margin: 0 auto;
+				padding: 40px 20px;
+				text-align: left;
+				border-radius: 20px;
+				border: #655629 4px solid;
+				position: relative;
+	}	
+	
+	/*position of the container */
+	.positionContainer {
+		
+		}
+
+	/* side bar- left side of all pages */
+	#sidebar {
+				width: 280px;
+				float: left;
+				margin: 0 auto;
+				text-align: center;
+				margin-top:25px;
+	}
+	
+	/* contents located in sidebar*/
+	#sidebarContent {
+					width: 250px;
+					margin: 0 auto;
+					padding: 20px 4px;
+					text-align: center;
+					border: #655629 2px solid;
+					border-radius: 20px;
+					background: #bec6bc;
+					padding-top:20px;
+					margin-top:10px;
+	}
+	
+	/* main text area*/
+	#main {
+			width: 580px;
+			float: right;
+			margin: 0 auto;
+			margin-top:10px;
+			padding: 20px;
+			text-align: left;
+			background: #bec6bc;
+			border: #655629 2px solid;
+			border-radius: 20px;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			position: relative;
+	}
+	
+	/*adding box with shadow and changing font-family, size, etc. for h1 */
+	h1{
+		width:870px;
+		height:3em;
+		text-align:center;
+		padding:0.5em;
+		font-size:40px;
+		color:#171717;
+		box-shadow:0.250em 0.125em 0.625em 0.625em #494433;
+		border-radius:0.625em;
+		font-family: "AR BERKLEY";
+		background-color:#d0ddce;
+	}
+ 
+	/* changing font-family, size, etc. for h2 */
+	h2{ 
+		font-family:"Segoe Print";
+		font-size: 28px;
+		padding-left:2em; 
+		color:black;
+	}
+	
+	/* changing font-family, size, etc. for paragrapho */
+	p{
+		font-family:"Lucida Console";
+		font-size: 17px;
+		padding-left:2em; 
+		color:black;
+	}	
+	
+	/* changing position and align of text in navigation bar  */
+	nav ul{ 
+			text-align:center; 
+			padding:2.438em;
+			padding-top:0.8em;
+			cursor: pointer;
+	}
+
+	nav ul li{ 
+				width:6em;
+				padding-top:1.875em;
+				float:left; 
+				display:inline; 
+				text-transform:uppercase;
+				padding:0.06em ; 
+				letter-spacing:0em;
+	}
+ 
+	/* changing font of text and background color of navigation bar */
+	nav ul li a{ 
+				background-color:#d0ddce;
+				border-radius:0.250em; 
+				color: black; 
+				display: block; 
+				font-family:"Arial black"; 
+				padding: 0.313em  0.313em; 
+				text-decoration: none; 
+				font-size:13px; 
+	}
+ 
+	/*changing color when hovering over navigation baar */
+	nav ul li a:hover{ background:#f1f1f1;}
+
+	/*navigation bar dropdown class 
+	  set size and color
+	  code source-W3school
+	*/
+	.dropdown-content {
+					display: none;
+					position: absolute;
+					background-color: #d0ddce;
+					min-width: 60px;
+					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+	
+	.dropdown-content a {
+					color: black;
+					padding: 12px 16px;
+					text-decoration: none;
+					display: block;
+	}
+	/*navigation bar dropdown class - changing background color */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	
+	.dropdown:hover .dropdown-content { display: block;}
+
+	/*extra space */
+	.clearfloat {
+				clear: both;
+				height: 0;
+				font-size: 1px;
+				line-height: 0;
+	}	
+	
+	/*footer id */
+	#footer{ 		
+			margin-right:auto; 
+			margin-left:auto; 
+			margin-top:3em;
+			text-align: center;
+			font-size: 15px;
+			font-family:"Arial Black";
+	}
+	
+	/*class for using float to place paragraph and image side by side 
+	  code source- HTML&CSS book */
+	*/
+	.parts{
+		border:20px
+		color: #cbefc6
+	}
+	
+	/* class- for showing list of pictures side by side */
+	.homeSlider ul li {
+					margin: 0 4px;
+					display: inline
+	}
+	.homeSlider {
+				overflow: hidden;
+				padding: 0;
+				margin: 0 auto;
+				height:280px;
+				margin-left:18px;
+	}
+	
+	/*changing look of format by adding color and changing fonts */
+	form{
+		margin-top:0em; 
+		border-radius:0.625em; 
+		color:#000000;
+		font-family: Verdana; 
+		font-weight: bold; 
+		font-size: 0.938em;
+		background-color:#bec6bc; 
+		padding-top:1em;
+		padding-left:2em;
+		}
+	/*visitor counter font */	
+	#visitor {
+	text-align: center;
+	font-size: 15px;
+	}
+	
+	/* ***display animation for page visitor****  */
+	#myDIV {
+    border: 0px solid black;
+    width: 200px;
+    height: 50px;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove {
+		50% {font: 40px bold;}
+	}
+
+	/* Standard syntax */
+	@keyframes mymove {
+		50% {font: 30px bold;}
+	}
+	
+	
+	
+	/* **********Javascript****************** */
+	.mySlides {display:none}
+
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	}
+
+	/* Next & previous buttons */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -22px;
+	  color: black;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+	  background-color: #bec6bc;
+	}
+
+	/* Number text (1/8 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	  cursor:pointer;
+	  height: 13px;
+	  width: 13px;
+	  margin: 0 2px;
+	  background-color: black;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+	  background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	  .prev, .next,.text {font-size: 11px}
+	}
+	
+	#map_canvas {
+	margin-top: 20px;
+	margin-left: 40px;
+	width: 500px;
+	height: 250px
+}
+	
+	
