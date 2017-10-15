@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+
+	<title> Guide</title>
+	
+	<!-- External stylesheet -->
+	<link type="text/css" rel="stylesheet" href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/css/css.css">
+		<script type="text/javascript" src="secondjs.js"></script>
+
+</head>
+
+<body class="positionContainer">
+		<div id="visitor">
+		<!-- animation -->
+		 <div id="myDIV">
+
+		Page views:
+		<div id="counter3"></div>
+
+		</div>
+		</div>
+	<!-- the main container - in the middle -->
+	<div id="container">
+	
+		<!-- Header on the top of the container -->
+		<header> 
+			<h1>Welcome To Ethiopia<br /> <i>Addis Ababa</i></h1>
+		</header>
+		
+		<!--side bar- left side of the page -->
+		<div id="sidebar">
+		
+			<!-- contents located in sidebar -->
+			<div id="sidebarContent">
+				<aside>
+					
+					<p><b>Elevation:</b><br> 7,726′ <br><br>
+					<b>Area:</b> <br>203.5 mi² <br><br>
+					<b>Population:</b><br> 3.385 million <br> <br>
+					<b>Weather: </b><br>52°F (11°C)<br><br>
+					<b> Local time:</b><br> <p id="demo"></p><br><br>
+					</p>
+										
+						<!-- GIF picture -->
+						<img src="food.gif" width="200" height="300" alt="city" title="city"/> <br>
+
+					
+					</aside>
+			<!-- end sidebarContent -->
+			</div>	
+		<!-- end sidebar -->
+		</div>
+			
+		<!--main text area -->		
+		<div id="main">
+		
+			<!--navigation bar -->
+			<nav>
+				<ul>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/home.html" >Home</a></li>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/about.html" >About </a></li>
+					
+					<!--dropdown bar -->
+					<li class="dropdown">
+						<a class="dropbtn">Travel</a>
+						<div class="dropdown-content">
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/guide.html" >Travel Guide</a>
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/todo.html" >Things to do</a>
+						</div>
+					</li>
+					
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/contact/contact.html" >Contact</a></li>
+				</ul>
+			</nav>
+			
+			<section>
+			<div align="right" >
+			<button onclick="myFunction()">Print this page</button>
+
+			</div>
+				<!--sub title -->
+				<h2>Understand</h2>
+				<div class="parts">
+				<div id="paragraph">
+				With a population of 3,384,569 (2007 census), the city is the largest in the country.
+				Many of the wealthiest people live in the southeast (Bole), southwest (old airport),
+				CMC, Ayat and Lamberet parts of town. There are more than 120 international missions
+				and embassies in Addis Ababa, making the city a hub for international diplomacy concerning 
+				Africa. The headquarters of the African Union and the UN Economic Commission for Africa 
+				UNECA)[1] are both in the city. The European Union and the United States both have two 
+				delegations in Addis Ababa, one for bilateral relations with Ethiopia and one for the African Union.
+				</div><br>
+				<button onclick="myyFunction()">Print this paragraph</button>
+
+				<h2>By Plane</h2>
+				Bole International Airport (IATA: ADD), the busiest airport in East Africa and the hub of
+				Ethiopian Airlines[2], is serviced by several international airlines with daily flights to Europe, 
+				United States, and Asia as well as inter-African destinations including Accra, Bamako, Brazzaville,
+				Cairo, Dakar, Dar es Salaam, Djibouti, Khartoum, Harare, Johannesburg, Nairobi and many more cities 
+				in Africa. Turkish Airlines has daily flights from Istanbul to Addis Ababa.
+				There are two terminals. T1 (the older, smaller one) is for all domestic flights and most flights to
+				neighbouring nations (but not Kenya). T2 (the newer 2003 building) is for all other international flights -
+				arrangements may change so check first. As of July 2012 access into the terminals is restricted. 
+				Anyone at the airport to meet you, plus taxis, will be out in the carpark. A dozen of the top hotels
+				still have a booth inside the arrivals area. Similar rules apply at the other airports in the country, 
+				for both arrivals and departures. Most hotels will pick you up for free - inquire at booking.
+				One month single entry visa on arrival costs 50USD while three months costs 70USD, note that it is impossible 
+				to apply multi-entry visa in the airport now. (2016 June)
+				
+				<h2>By Car</h2>
+				Most of the roads are in good condition.
+
+				<h2>By Train</h2>
+				Services on the old metre-gauge railway between Addis Ababa and Djibouti via Dire Dawa were cancelled in 2008.
+				A new standard-gauge railway has recently been built; passenger services from Djibouti via Dire Dawa, Awash and
+				Adama to Lebu and Kality were inaugurated in 2017.
+				
+				<img src="guide.jpg" width="560" height="315" alt="city" title="city"/> <br>
+
+				
+				<h2>By Bus</h2>
+				Bus terminals:<br>
+				Autobus Terra near Mercato: This is the main bus terminal where most of the national buses arrive and depart.<br>
+				Meskel Square: (formerly from the railway station)<br>
+				
+
+				</div>
+			</section>
+		<!-- end of main -->
+		</div>
+
+		<!--extra spaces -->
+		<br class="clearfloat" />
+		
+		<!--footer -->
+		<footer>
+			<div id="footer">
+				&copy; Yusuf Hamid 2017. All rights reserved
+			</div>	
+		</footer>
+	<!-- end of container -->	
+	</div>	
+<!-- end of body -->	
+</body>
+
+
+<script>
+var n = localStorage.getItem('on_load_counter3');
+ 
+if (n === null) {
+    n = 0;
+}
+ 
+n++;
+ 
+localStorage.setItem("on_load_counter3", n);
+ 
+document.getElementById('counter3').innerHTML = n;
+
+/*local time */
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+</script>
+</html>

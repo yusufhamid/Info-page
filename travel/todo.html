@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+
+	<title> To do</title>
+	
+	<!-- External stylesheet -->
+	<link type="text/css" rel="stylesheet" href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/css/css.css">
+
+</head>
+
+<body class="positionContainer">
+		<div id="visitor">
+		<!-- animation -->
+		 <div id="myDIV">
+
+		Page views:
+		<div id="counter4"></div>
+
+		</div>
+		</div>
+	<!-- the main container - in the middle -->
+	<div id="container">
+	
+		<!-- Header on the top of the container -->
+		<header> 
+			<h1>Welcome To Ethiopia<br /> <i>Addis Ababa</i></h1>
+		</header>
+		
+		<!--side bar- left side of the page -->
+		<div id="sidebar">
+		
+			<!-- contents located in sidebar -->
+			<div id="sidebarContent">
+				<aside>
+					
+					<p><b>Elevation:</b><br> 7,726′ <br><br>
+					<b>Area:</b> <br>203.5 mi² <br><br>
+					<b>Population:</b><br> 3.385 million <br> <br>
+					<b>Weather: </b><br>52°F (11°C)<br><br>
+					<b> Local time:</b><br> <p id="demo"></p><br><br>
+					</p>
+					
+			
+					<!-- GIF picture -->
+						<img src="street.gif" width="200" height="300" alt="city" title="city"/> <br>
+					
+				</aside>
+			<!-- end sidebarContent -->
+			</div>	
+		<!-- end sidebar -->
+		</div>
+			
+		<!--main text area -->		
+		<div id="main">
+		
+			<!--navigation bar -->
+			<nav>
+				<ul>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/home.html" >Home</a></li>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/about.html" >About </a></li>
+					
+					<!--dropdown bar -->
+					<li class="dropdown">
+						<a class="dropbtn">Travel</a>
+						<div class="dropdown-content">
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/guide.html" >Travel Guide</a>
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/todo.html" >Things to do</a>
+						</div>
+					</li>
+					
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/contact/contact.html" >Contact</a></li>
+				</ul>
+			</nav>
+			
+			<section>
+				<!--sub title -->
+				<h2>Things to do in Addis </h2>
+				<div class="parts">
+				
+				<p>
+				<img src="todo.jpg" width="560" height="315" alt="city" title="city"/> <br>
+
+				<strong>Ethiopian National Museum</strong><br> (Between Arat Kilo Avenue and the University of Addis Ababa Graduate School).
+				Although the museum is unknown to most, the Ethiopian National Museum is a world-class museum; truly a hidden
+				gem! The most famous exhibit is the replica of Lucy, an early hominid, but the museum offers much more.
+				With Ethiopian civilization being one of the oldest in the world, the artifacts within the museum span thousands 
+				of years, including some from its earliest days. A wide variety of artifacts are featured, from sculptures to
+				clothing to artwork. Both traditional and modern art are featured. Well worth a visit.<br><br>
+				
+				<strong>Africa Hall</strong><br> (located across Menelik II Avenue from the Palace). This is where the United Nations Economic 
+				Commission for Africa is headquartered as well as most UN offices in Ethiopia. It is also the site of the 
+				founding of the Organization for African Unity (OAU) which eventually became the African Union<br><br>
+				
+				<strong>Entoto Mountain</strong><br> walk from St. Mary's church, the first church of Addis and St Urael church and see the city 
+				itself from the top of the mountain. If planning to hiring a car - Never pay more than 300 birr for a taxi
+				unless you hire them for the whole day and are making other stops. Walking is a great way to make it, but will 
+				take a good half day.<br><br>
+				
+				<img src="todo1.jpg" width="560" height="315" alt="city" title="city"/> <br>
+
+				<strong>Edna Mall</strong><br> on Telebole. Pretty good bookshop here, along with a Cinema stocked with Popcorn & Western Films.
+				The center of the mall features an indoor amusement park with carousel, climbing tubes, and bumper cars; it's 
+				a fun place for small children, but really crowded on the weekends and holidays.<br><br>
+				</p>
+				
+	<center>
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faddisababatoday%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</center>
+				</div>
+			</section>
+			
+		<!-- end of main -->
+		</div>
+
+		<!--extra spaces -->
+		<br class="clearfloat" />
+		
+		<!--footer -->
+		<footer>
+			<div id="footer">
+				&copy; Yusuf Hamid 2017. All rights reserved
+			</div>	
+		</footer>
+	<!-- end of container -->	
+	</div>	
+<!-- end of body -->	
+</body>
+
+<script>
+var n = localStorage.getItem('on_load_counter4');
+ 
+if (n === null) {
+    n = 0;
+}
+ 
+n++;
+ 
+localStorage.setItem("on_load_counter4", n);
+ 
+document.getElementById('counter4').innerHTML = n;
+
+/*local time */
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+</script>
+</html>
