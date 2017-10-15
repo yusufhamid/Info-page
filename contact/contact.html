@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+
+	<title> Contact</title>
+	
+	<!-- External stylesheet -->
+	<link type="text/css" rel="stylesheet" href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/css/css.css">
+		<script type="text/javascript" src="alert.js"></script>
+
+</head>
+<body class="positionContainer">
+		<div id="visitor">
+		<!-- animation -->
+		<div id="myDIV">
+
+		Page views:
+		<div id="counter5"></div>
+
+		</div>
+		</div>
+
+
+	<!-- the main container - in the middle -->
+	<div id="container">
+	
+		<!-- Header on the top of the container -->
+		<header> 
+			<h1>Welcome To Ethiopia<br /> <i>Addis Ababa</i></h1>
+		</header>
+
+
+		<!--side bar- left side of the page -->
+		<div id="sidebar">
+		
+			<!-- contents located in sidebar -->
+			<div id="sidebarContent">
+				<aside>
+					
+					<p><b>Elevation:</b><br> 7,726′ <br><br>
+					<b>Area:</b> <br>203.5 mi² <br><br>
+					<b>Population:</b><br> 3.385 million <br> <br>
+					<b>Weather: </b><br>52°F (11°C)<br><br>
+					<b> Local time:</b><br> <p id="demo"></p><br><br>
+					</p>
+					
+			
+					
+					<h3>Social Media</h3>
+					
+					<p>like us on <a href="https://www.facebook.com" target="blank"> Facebook</a></p>
+					<p>Follow us on <a href="https://twitter.com" target="blank">Twitter</a></p>					
+				</aside>
+			<!-- end sidebarContent -->
+			</div>	
+		<!-- end sidebar -->
+		</div>
+			
+		<!--main text area -->		
+		<div id="main">
+		
+			<!--navigation bar -->
+			<nav>
+				<ul>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/home.html" >Home</a></li>
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/about/about.html" >About </a></li>
+					
+					<!--dropdown bar -->
+					<li class="dropdown">
+						<a class="dropbtn">Travel</a>
+						<div class="dropdown-content">
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/guide.html" >Travel Guide</a>
+							<a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/travel/todo.html" >Things to do</a>
+						</div>
+					</li>
+					
+					<li><a href="http://students.washington.edu/yusufh/student_html/tinfo230/assign4/contact/contact.html" >Contact</a></li>
+				</ul>
+			</nav>
+			
+			<section>
+				<!--sub title -->
+				<h2>Ask us anything about Addis Ababa. We are here to help you!</h2>
+
+				<div class="parts">
+    <form method = "post" action = "contact.php">
+					<!--first name box -->
+					<p>
+						<label for="name">Full Name</label>
+						<input type="name"  name="name" />
+					</p>
+					
+	 
+					<!--email address box -->
+					<p>
+						<label for="email">Email address</label>
+						<input type="email" name="email" />
+					</p>	
+					
+					<p>
+						<label for="number">Phone Number</label>
+						<input type="number" name="number"/>
+						<select>
+						<option value="cell phone">Cell phone</option>
+						<option value="home phone">Home phone</option>
+						<option value="work phone">Work phone</option>
+					 </select>
+					</p>						
+					
+					<!--Comments -->
+					<p>
+						<label>Comments</label><br>
+						<textarea name="message" cols="40" rows="6">Hello, We can help you! </textarea>
+					</p>
+				
+					<!-- radio button-->	
+					<span class="title"> Have you been to Addis Ababa before? </span>
+					<label><input type="radio" value="yes"> Yes </label>
+					<label><input type="radio" value="no"> No </label><br>
+					
+					 
+										
+					<!--submit bottom -->
+					<center><input type="submit" value="Submit"/></center>
+				</form>
+
+					
+				</div>
+			</section>
+			
+		<!-- end of main -->
+		</div>
+
+		<!--extra spaces -->
+		<br class="clearfloat" />
+		
+		<!--footer -->
+		<footer>
+			<div id="footer">
+				&copy; Yusuf Hamid 2017. All rights reserved
+			</div>	
+		</footer>
+	<!-- end of container -->	
+	</div>	
+<!-- end of body -->	
+</body>
+<script>
+var n = localStorage.getItem('on_load_counter5');
+ 
+if (n === null) {
+    n = 0;
+}
+ 
+n++;
+ 
+localStorage.setItem("on_load_counter5", n);
+ 
+document.getElementById('counter5').innerHTML = n;
+
+/*local time */
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+</script>
+</html>
